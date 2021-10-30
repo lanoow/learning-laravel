@@ -28,5 +28,4 @@ Watched all videos from **Section 1**
 
 ## Day 2
 ### Part 1
----
 Watched all videos from **Section 2 & 3**
