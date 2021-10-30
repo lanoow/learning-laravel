@@ -35,7 +35,7 @@ class Post {
                     $doc->date,
                     $doc->text
                 ))
-                ->sortByDesc('date');
+                ->sortByDesc('id');
             });
         }
 
