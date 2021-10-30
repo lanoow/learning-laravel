@@ -20,16 +20,30 @@
     </style>
 </head>
 <body class="font overflow-x-hidden">
-    <div class="container mx-auto flex flex-col my-24">
-        <img class="md:rounded-xl w-full h-96 mx-auto object-cover" src="https://picsum.photos/1920/1080" alt="Blog Image">
-        <div class="flex flex-col my-8 mx-8 md:mx-0 space-y-4">
-            <span class="text-6xl text-gray-900 font-black">Blog Title</span>
-            <span class="text-2xl text-gray-700">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, sapiente laborum qui sint mollitia laboriosam cupiditate neque eum! Fuga quaerat perferendis architecto veritatis suscipit obcaecati, rerum libero dicta inventore ipsum.</span>
-        </div>
+    <x-blogPost>
+        <x-slot name="photo">
+            {{ $post->photo }}
+        </x-slot>
 
-        <div>
-            <a href="/" class="py-3 px-4 mx-8 md:mx-0 rounded-xl bg-gray-200 hover:bg-red-600 text-xl font-bold text-black hover:text-white transition duration-200 transform hover:scale-105"><i class="fas fa-home"></i> Go Home</a>
-        </div>
-    </div>
+        <x-slot name="photoAlt">
+            {{ $post->title }} Image
+        </x-slot>
+
+        <x-slot name="title">
+            {{ $post->title }}
+        </x-slot>
+
+        <x-slot name="content">
+            {{ $post->text }}
+        </x-slot>
+
+        <x-slot name="link">
+            /
+        </x-slot>
+
+        <x-slot name="button">
+            <i class="fas fa-home"></i> Go Home
+        </x-slot>
+    </x-blogPost>
 </body>
 </html>

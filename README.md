@@ -1,4 +1,6 @@
 # Learning Laravel
+All of the knowledge has been gained from [this Tutorial](https://laracasts.com/series/laravel-8-from-scratch/) -> The best tutorial ever!
+
 ## Preparation
 1. Choose an IDE to code in, I personally like **Visual Studio Code**
 2. Configure it to your preference
@@ -18,3 +20,13 @@ But I also installed and the **Laravel Installer** just in case I need it
 	$ laravel new example-app
 	$ cd example-app
 	$ php artisan serve	
+
+**Note:** I didn't include `.env` so make sure to create a `.env` file from the `.env.example` file.
+
+## Day 1
+Watched all videos from **Section 1**
+
+## Day 2
+### Part 1
+---
+Watched all videos from **Section 2 & 3**
