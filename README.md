@@ -23,9 +23,10 @@ But I also installed and the **Laravel Installer** just in case I need it
 
 **Note:** I didn't include `.env` so make sure to create a `.env` file from the `.env.example` file.
 
-## Day 1
+## Keeping track of the Tutorial
+### Day 1
 Watched all videos from **Section 1**
 
-## Day 2
-### Part 1
+### Day 2
+#### Part 1
 Watched all videos from **Section 2 & 3**
