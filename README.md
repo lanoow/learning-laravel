@@ -28,5 +28,4 @@ But I also installed and the **Laravel Installer** just in case I need it
 Watched all videos from **Section 1**
 
 ### Day 2
-#### Part 1
-Watched all videos from **Section 2 & 3**
+#### Part 1 -> Watched all videos from **Section 2 & 3**
