@@ -3,9 +3,9 @@ All of the knowledge has been gained from [this Tutorial](https://laracasts.com/
 
 ## Preparation
 1. Choose an IDE to code in, I personally like **Visual Studio Code**
-2. Configure it to your preference
-3. If you're using **VS Code**, here are my **TOP** extensions for **Laravel**:
-	* [Laravel Extension Pack](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack) -> Provides very useful extensions for **Laravel**
+2. 1. Configure it to your preference
+	2. If you're using **VS Code**, make sure to download [this extension (Laravel Extension Pack)](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack), it provides all top tier extensions for **Laravel**
+3. Download & install **PHP 8**
 	
 ## Installation
 I personally chose to install **Laravel** with **Composer** because I think it's the best choice for me
@@ -41,3 +41,6 @@ Watched all videos from **Section 1**
 ### Day 2
 #### Part 1 -> Watched all videos from **Section 2 & 3**
 #### Part 2 -> Watched all videos from **Section 4**
+
+### Day 3
+Watched al lvideos from **Section 5 & 6**

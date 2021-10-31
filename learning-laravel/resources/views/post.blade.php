@@ -20,42 +20,6 @@
     </style>
 </head>
 <body class="font overflow-x-hidden">
-    <x-blogPost>
-        <x-slot name="photo">
-            {{ $post->photo }}
-        </x-slot>
-
-        <x-slot name="photoAlt">
-            {{ $post->photoAlt }}
-        </x-slot>
-
-        <x-slot name="title">
-            {{ $post->title }}
-        </x-slot>
-
-        <x-slot name="category">
-            {{ $post->category->name }}
-        </x-slot>
-
-        <x-slot name="categorySlug">
-            {{ $post->category->slug }}
-        </x-slot>
-
-        <x-slot name="author">
-            {{ $post->author->name }}
-        </x-slot>
-
-        <x-slot name="content">
-            {{ $post->content }}
-        </x-slot>
-
-        <x-slot name="link">
-            /
-        </x-slot>
-
-        <x-slot name="button">
-            <i class="fas fa-home"></i> Go Home
-        </x-slot>
-    </x-blogPost>
+    <x-blogPost :post="$post"></x-blogPost>
 </body>
 </html>

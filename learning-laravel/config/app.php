@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Sofia', // List: https://www.php.net/manual/en/timezones.php
 
     /*
     |--------------------------------------------------------------------------
