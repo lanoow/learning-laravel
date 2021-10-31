@@ -20,6 +20,8 @@ But I also installed and the **Laravel Installer** just in case I need it
 	$ laravel new example-app
 	$ cd example-app
 	$ php artisan serve	
+	
+---
 
 **Note:** I didn't include `.env` so make sure to create a `.env` file from the `.env.example` file.
 
