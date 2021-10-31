@@ -22,6 +22,7 @@
     </style>
 </head>
 <body class="font overflow-x-hidden">
+    @if ($_SERVER['REQUEST_URI'] === "/")
     <div class="h-96 mt-60 w-full flex px-8 xl:px-80">
         <div class="flex flex-col space-y-8 mt-16">
             <div class="flex flex-col">
@@ -44,13 +45,21 @@
             </video>
         </div>
     </div>
+    @endif
     <div class="w-full flex flex-col px-8 xl:max-w-7xl mx-auto mt-60 mb-32 space-y-8">
+        @if ($_SERVER['REQUEST_URI'] === "/")
         <span class="text-5xl font-black text-gray-900 border-b-2 border-gray-400">Blog</span>
+        @else
+        <div class="flex items-center justify-between border-b-2 border-gray-400">
+            <span class="text-5xl font-black text-gray-900">Blog</span>
+            <a href="/" class="text-xl font-black text-gray-700 hover:text-red-600 uppercase transition duration-200">Go Home</a>
+        </div>
+        @endif
         <div class="grid grid-end grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             @foreach ($posts as $post)
             <x-blogCard>
                 <x-slot name="link">
-                    /posts/{{ $post->id }}
+                    /posts/{{ $post->slug }}
                 </x-slot>
 
                 <x-slot name="photo">
@@ -67,6 +76,22 @@
 
                 <x-slot name="content">
                     {{ $post->excerpt }}..
+                </x-slot>
+
+                <x-slot name="category">
+                    {{ $post->category->name }}
+                </x-slot>
+
+                <x-slot name="categorySlug">
+                    {{ $post->category->slug }}
+                </x-slot>
+
+                <x-slot name="author">
+                    {{ $post->user->name }}
+                </x-slot>
+
+                <x-slot name="authorSlug">
+                    {{ $post->user->slug }}
                 </x-slot>
 
                 <x-slot name="button">

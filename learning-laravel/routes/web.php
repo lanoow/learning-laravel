@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Models\Category;
+use App\Models\Author;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +18,24 @@ use App\Models\Post;
 
 Route::get('/', function () {
     return view('homepage', [
-        'posts' => Post::all()
+        'posts' => Post::with('category')->get()
     ]);
 });
 
-Route::get('posts/{id}', function ($slug) {
+Route::get('posts/{post:slug}', function (Post $post) {
     return view('post', [
-        'post' => Post::find($slug)
+        'post' => $post
+    ]);
+});
+
+Route::get('category/{category:slug}', function (Category $category) {
+    return view('homepage', [
+        'posts' => $category->posts
+    ]);
+});
+
+Route::get('author/{author:slug}', function (Post $author) {
+    return view('homepage', [
+        'posts' => $author->posts
     ]);
 });

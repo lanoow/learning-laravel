@@ -26,15 +26,31 @@
         </x-slot>
 
         <x-slot name="photoAlt">
-            {{ $post->title }} Image
+            {{ $post->photoAlt }}
         </x-slot>
 
         <x-slot name="title">
             {{ $post->title }}
         </x-slot>
 
+        <x-slot name="category">
+            {{ $post->category->name }}
+        </x-slot>
+
+        <x-slot name="categorySlug">
+            {{ $post->category->slug }}
+        </x-slot>
+
+        <x-slot name="author">
+            {{ $post->user->name }}
+        </x-slot>
+
+        <x-slot name="authorSlug">
+            {{ $post->user->slug }}
+        </x-slot>
+
         <x-slot name="content">
-            {{ $post->text }}
+            {{ $post->content }}
         </x-slot>
 
         <x-slot name="link">
