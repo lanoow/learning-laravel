@@ -23,6 +23,15 @@ But I also installed and the **Laravel Installer** just in case I need it
 	
 ---
 
+If you want to install my repo do this:
+
+	$ git clone https://github.com/lanoow/learning-laravel
+	$ composer install
+	$ cd learning-laravel/
+	; Make sure to link your MySQL Database
+	$ php artisan migrate:fresh
+	$ php artisan serve
+
 **Note:** I didn't include `.env` so make sure to create a `.env` file from the `.env.example` file.
 
 ## Keeping track of the Tutorial
