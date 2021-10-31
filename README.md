@@ -29,4 +29,4 @@ Watched all videos from **Section 1**
 
 ### Day 2
 #### Part 1 -> Watched all videos from **Section 2 & 3**
-#### Part 2 -> Watched Videos 17 to 28 from **Section 4**
+#### Part 2 -> Watched Videos 17 to 27 from **Section 4**
