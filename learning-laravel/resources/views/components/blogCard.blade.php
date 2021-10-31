@@ -6,8 +6,8 @@
 
     <div class="flex items-center justify-between mt-4">
         <div class="flex items-center space-x-2">
-            <a href="/author/{{ $authorSlug }}" class="font-black text-sm text-gray-700 border-b border-transparent hover:border-gray-700 transition duration-300"><i class="far fas-user"></i> {{ $author }}</a>
-            |
+            <a href="/author/{{ $author }}" class="font-black text-sm text-gray-700 border-b border-transparent hover:border-gray-700 transition duration-300"><i class="far fas-user"></i> {{ $author }}</a>
+            <span>|</span>
             <a href="/category/{{ $categorySlug }}" class="font-black text-sm text-gray-700 uppercase border-b border-transparent hover:border-gray-700 transition duration-300">{{ $category }}</a>
         </div>
         <a href="{{ $link }}" class="font-bold text-xl transform hover:scale-105 hover:-translate-x-4 transition duration-200">{{ $button }}</a>

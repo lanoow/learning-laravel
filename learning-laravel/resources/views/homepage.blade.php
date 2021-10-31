@@ -59,7 +59,7 @@
             @foreach ($posts as $post)
             <x-blogCard>
                 <x-slot name="link">
-                    /posts/{{ $post->slug }}
+                    /post/{{ $post->slug }}
                 </x-slot>
 
                 <x-slot name="photo">
@@ -87,13 +87,9 @@
                 </x-slot>
 
                 <x-slot name="author">
-                    {{ $post->user->name }}
+                    {{ $post->author->name }}
                 </x-slot>
-
-                <x-slot name="authorSlug">
-                    {{ $post->user->slug }}
-                </x-slot>
-
+                
                 <x-slot name="button">
                     Read More <i class="fas fa-long-arrow-alt-right"></i>
                 </x-slot>

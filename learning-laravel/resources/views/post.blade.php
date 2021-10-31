@@ -42,11 +42,7 @@
         </x-slot>
 
         <x-slot name="author">
-            {{ $post->user->name }}
-        </x-slot>
-
-        <x-slot name="authorSlug">
-            {{ $post->user->slug }}
+            {{ $post->author->name }}
         </x-slot>
 
         <x-slot name="content">

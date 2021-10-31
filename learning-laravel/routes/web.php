@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use App\Models\Category;
-use App\Models\Author;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +18,11 @@ use App\Models\Author;
 
 Route::get('/', function () {
     return view('homepage', [
-        'posts' => Post::with('category')->get()
+        'posts' => Post::latest()->get() // Old: Post::latest()->with('category', 'author')->get() | Moved to Post Module/Class
     ]);
 });
 
-Route::get('posts/{post:slug}', function (Post $post) {
+Route::get('post/{post:slug}', function (Post $post) {
     return view('post', [
         'post' => $post
     ]);
@@ -30,12 +30,12 @@ Route::get('posts/{post:slug}', function (Post $post) {
 
 Route::get('category/{category:slug}', function (Category $category) {
     return view('homepage', [
-        'posts' => $category->posts
+        'posts' => $category->posts // Old: $author->posts->load('category', 'author') | Moved to Post Module/Class
     ]);
 });
 
-Route::get('author/{author:slug}', function (Post $author) {
+Route::get('author/{author:name}', function (User $author) {
     return view('homepage', [
-        'posts' => $author->posts
+        'posts' => $author->posts // Old: $author->posts->load('category', 'author') | Moved to Post Module/Class
     ]);
 });

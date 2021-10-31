@@ -4,7 +4,7 @@
         <div class="flex items-center justify-between">
             <span class="text-6xl text-gray-900 font-black">{{ $title }}</span>
             <div class="flex items-center space-x-2">
-                <a href="/author/{{ $authorSlug }}" class="text-md text-gray-700 hover:text-red-400 transition duration-200 font-bold uppercase">{{ $author }}</a>
+                <a href="/author/{{ $author }}" class="text-md text-gray-700 hover:text-red-400 transition duration-200 font-bold uppercase">{{ $author }}</a>
                 |
                 <a href="/category/{{ $categorySlug }}" class="text-md text-gray-700 hover:text-red-400 transition duration-200 font-bold uppercase">{{ $category }}</a>
             </div>
