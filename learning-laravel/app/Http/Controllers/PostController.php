@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Category;
 use App\Models\Post;
 
 class PostController extends Controller
 {
     public function index() {
-        return view('homepage', [
-            'posts' => Post::latest()->filter(request(['s']))->get(),
-            'categories' => Category::all()
+        return view('posts.index', [ // s = search
+            'posts' => Post::latest()->filter(request(['s', 'category', 'author']))->paginate(6)->withQueryString()
         ]);
     }
 
     public function show(Post $post) {
-        return view('post', [
+        return view('posts.show', [
             'post' => $post
         ]);
     }

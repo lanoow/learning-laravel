@@ -43,4 +43,7 @@ Watched all videos from **Section 1**
 #### Part 2 -> Watched all videos from **Section 4**
 
 ### Day 3
-Watched al lvideos from **Section 5 & 6**
+Watched all videos from **Section 5 & 6**
+
+### Day 4
+#### Part 1 -> Watched all videos from **Section 7 & 8**
