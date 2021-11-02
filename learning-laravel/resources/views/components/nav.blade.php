@@ -1,17 +1,17 @@
-<nav class="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl xl:max-w-7xl mx-auto h-14 border-b-2 border-gray-300 mb-8">
+<nav class="relative max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl xl:max-w-7xl mx-auto h-14 border-b-2 border-gray-300 mb-8">
     <div class="flex flex-col md:flex-row md:items-center md:justify-between mt-4">
 
         <div class="flex items-center justify-between">
             <div class="text-gray-900 font-black text-2xl lg:text-3xl flex items-center space-x-4">
                 <a href="/" class="transition duration-200 transform hover:scale-105 hover:text-red-600">Learning <span class="text-red-600"><i class="fab fa-laravel"></i> Laravel</span></a>
             </div>
-    
+
             <button id="burger" class="hover:text-red-600 focus:text-red-600 md:hidden ">
                 <i class="fas fa-hamburger fa-2x"></i>
             </button>
         </div>
 
-        <div id="menu" class="hidden mt-8 bg-gray-200 border-2 border-gray-300 rounded-xl p-4 md:mt-0 md:bg-transparent md:border-none md:rounded-none md:p-0 md:flex flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 text-gray-700 font-bold xs:text-xl md:text-md lg:text-xl">
+        <div id="menu" class="hidden mt-8 bg-gray-200 border-2 border-gray-300 rounded-xl p-4 md:mt-0 md:bg-transparent md:border-none md:rounded-none md:p-0 md:flex flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 text-gray-700 font-bold xs:text-xl md:text-md lg:text-xl" style="z-index:9998;">
 
             <a href="/" class="hover:text-red-600 transition duration-200 transform hover:scale-105">Home</a>
             <a href="/#blog" class="hover:text-red-600 transition duration-200 transform hover:scale-105">Blog</a>

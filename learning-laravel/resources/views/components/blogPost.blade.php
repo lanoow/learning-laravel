@@ -1,8 +1,8 @@
 @props(['post'])
 
-<div class="container md:px-8 xl:px-0 mx-auto flex flex-col my-24">
-    <img class="md:rounded-xl w-full h-96 mx-auto object-cover" src="{{ $post->photo }}" alt="{{ $post->photoAlt }}">
-    <div class="flex flex-col my-8 mx-8 md:mx-0 space-y-4">
+<div class="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl xl:max-w-7xl mx-auto flex flex-col my-24">
+    <img class="rounded-xl w-full h-96 mx-auto object-cover" src="{{ $post->photo }}" alt="{{ $post->photoAlt }}">
+    <div class="flex flex-col my-8 space-y-4">
         <div class="flex flex-col space-y-8 md:space-y-0 md:flex-row md:items-center justify-between">
             <span class="text-6xl text-gray-900 font-black">{{ $post->title }}</span>
             <div class="flex flex-col">
@@ -18,6 +18,6 @@
     </div>
 
     <div>
-        <a href="{{ $post->link }}" class="py-3 px-4 mx-8 md:mx-0 rounded-xl bg-gray-200 hover:bg-red-600 text-xl font-bold text-black hover:text-white transition duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">{!! $post->button !!}</a>
+        <a href="{{ $post->link }}" class="py-3 px-4 rounded-xl bg-gray-200 hover:bg-red-600 text-xl font-bold text-black hover:text-white transition duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">{!! $post->button !!}</a>
     </div>
 </div>
