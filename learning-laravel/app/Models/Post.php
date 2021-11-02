@@ -24,7 +24,7 @@ class Post extends Model {
 
         $query->when($filter['author'] ?? false, fn ($query, $author) =>
             $query->whereHas('author', fn ($query) =>
-                $query->where('name', $author)));
+                $query->where('username', $author)));
     }
 
     public function category() {

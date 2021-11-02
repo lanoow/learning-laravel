@@ -8,7 +8,7 @@
             <div class="flex flex-col">
                 <span class="text-sm text-gray-700 font-black uppercase">Published <time>{{ $post->created_at->diffForHumans() }}</time> by</span>
                 <div class="flex items-center space-x-2">
-                    <a href="/?author={{ $post->author->name }}" class="text-md text-gray-700 hover:text-red-600 transition duration-200 font-bold uppercase">{{ $post->author->name }}</a>
+                    <a href="/?author={{ $post->author->username }}" class="text-md text-gray-700 hover:text-red-600 transition duration-200 font-bold uppercase">{{ $post->author->name }}</a>
                     <span>|</span>
                     <a href="/?category={{ $post->category->slug }}" class="text-md text-gray-700 hover:text-red-600 transition duration-200 font-bold uppercase">{{ $post->category->name }}</a>
                 </div>

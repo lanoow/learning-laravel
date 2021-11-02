@@ -17,13 +17,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
     <style>
         .font { font-family: "Zen Kaku Gothic Antique", Arial, Helvetica, sans-serif !important; }
     </style>
 </head>
 <body class="font overflow-x-hidden">
-
     {{ $slot }}
-
 </body>
 </html>

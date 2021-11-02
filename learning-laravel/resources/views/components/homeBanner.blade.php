@@ -15,10 +15,5 @@
                     </a>
                 </div>
             </div>
-            <div style="z-index: -9998;" class="lg:transform lg:translate-x-1/4 lg:absolute lg:flex lg:items-center lg:w-3/4 xl:w-2/4 2xl:w-3/4 2xl:right-16 lg:h-96 hidden">
-                <video poster="/hero_poster.jpg" playsinline autoplay muted loop>
-                    <source src="/hero.mp4" type="video/mp4">
-                </video>
-            </div>
         </div>
     @endif

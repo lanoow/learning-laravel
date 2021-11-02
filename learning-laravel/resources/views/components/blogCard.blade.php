@@ -10,7 +10,7 @@
         <div class="flex flex-col">
             <span class="font-black text-sm uppercase text-gray-700 ml-1">Published <time>{{ $post->created_at->diffForHumans() }}</time></span>
             <div class="flex items-center space-x-2">
-                <a href="/?author={{ $post->author->name }}" class="font-black text-sm text-gray-700 uppercase border-b border-transparent hover:border-gray-700 transition duration-300"><i class="far fas-user"></i> {{ $post->author->name }}</a>
+                <a href="/?author={{ $post->author->username }}" class="font-black text-sm text-gray-700 uppercase border-b border-transparent hover:border-gray-700 transition duration-300"><i class="far fas-user"></i> {{ $post->author->name }}</a>
                 <span>|</span>
                 <a href="/?category={{ $post->category->slug }}" class="font-black text-sm text-gray-700 uppercase border-b border-transparent hover:border-gray-700 transition duration-300">{{ $post->category->name }}</a>
             </div>

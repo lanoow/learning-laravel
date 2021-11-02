@@ -1,4 +1,7 @@
 <x-layout>
+    <x-nav />
+    <x-success-alert />
+
     <x-homeBanner />
 
     <div id="blog" class="w-full flex flex-col px-8 xl:max-w-7xl 2xl:max-w-none 2xl:px-80 mx-auto mt-60 mb-32 space-y-8">
