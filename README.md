@@ -53,4 +53,4 @@ Watched all videos from **Section 9**
 Watched videos 52-54 from **Section 10**
 
 ### Day 6
-Watched video 55 from **Section 10**
+Watched all remaining videos from **Section 10**
