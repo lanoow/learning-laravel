@@ -11,6 +11,24 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('/post/{post:slug}', [PostController::class, 'show']);
 Route::post('/post/{post:slug}/comments', [PostCommnetsController::class, 'store']);
 
+Route::post('/newsletter', function () {
+    request()->validate(['email' => ['required', 'email']]);
+
+    $mailchimp = new \MailchimpMarketing\ApiClient();
+
+    $mailchimp->setConfig([
+	    'apiKey' => config('services.mailchimp.key'),
+	    'server' => config('services.mailchimp.server'),
+    ]);
+
+    $response = $mailchimp->lists->addListMember(config('services.mailchimp.list'), [
+        'email_address' => request('newsletter_email'),
+        'status' => 'subscribed'
+    ]);
+
+    return redirect('/')->with('success', 'You are now all signed up for our amazing newsletter!');
+});
+
 // Register
 Route::get('/register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');

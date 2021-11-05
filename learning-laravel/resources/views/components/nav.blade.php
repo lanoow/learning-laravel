@@ -21,10 +21,6 @@
                 <button x-on:click="open = true" class="flex items-center text-gray-700 font-bold hover:text-red-600 transition duration-200 transform hover:scale-105 outline-none focus:text-red-600">{{ Auth::user()->name }} <i class="fas fa-chevron-down text-sm ml-1 mt-1"></i></button>
 
                 <div x-show.transition="open" x-on:click.away="open = false" class="flex flex-col absolute right-0 w-40 mt-2 py-2 bg-white border border-gray-300 rounded-xl shadow-xl divide-y">
-                    <div class="py-1">
-                        <a href="#" class="block hover:bg-gray-100 hover:text-red-600 transition duration-200 px-2 py-1">View Profile</a>
-                        <a href="#" class="block hover:bg-gray-100 hover:text-red-600 transition duration-200 px-2 py-1">Settings</a>
-                    </div>
                     <form method="POST" action="/logout" class="py-1">
                         @csrf
                         <button class="block font-bold w-full text-left text-red-600 hover:bg-gray-100 hover:text-red-700 transition duration-200 px-2 py-1"><i class="fas fa-sign-out-alt"></i> Logout</button>
@@ -37,7 +33,7 @@
             <a href="/register" class="hover:text-red-600 transition duration-200 transform hover:scale-105">Register</a>
             @endauth
 
-            <a href="#" class="py-2 px-4 bg-red-600 hover:bg-red-500 text-white transition duration-200 transform hover:scale-105 rounded-xl">Join our Newsletter</a>
+            <a href="/#newsletter" class="py-2 px-4 bg-red-600 hover:bg-red-500 text-white transition duration-200 transform hover:scale-105 rounded-xl">Join our Newsletter</a>
 
         </div>
     </div>
