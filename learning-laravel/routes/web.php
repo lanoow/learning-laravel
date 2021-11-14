@@ -26,13 +26,18 @@ Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth
 
 
 // Admin
-Route::get('/panel/', fn () => view('panel.index'))->name('panel-home')->middleware('admin');
+Route::middleware('can:admin')->group(function () {
+    //Route::resource('/panel/', AdminPostController::class);
 
-Route::get('panel/posts/', [AdminPostController::class, 'all'])->name('panel-posts')->middleware('admin');
 
-Route::get('/panel/posts/create', [AdminPostController::class, 'viewCreate'])->name('panel-posts-create')->middleware('admin');
-Route::post('/panel/posts/create', [AdminPostController::class, 'create'])->name('panel-posts-create')->middleware('admin');
+    Route::get('/panel/', fn () => view('panel.index'))->name('panel-home');
 
-Route::get('/panel/posts/{post}/edit', [AdminPostController::class, 'edit'])->middleware('admin');
-Route::patch('/panel/posts/{post}', [AdminPostController::class, 'update'])->middleware('admin');
-Route::delete('/panel/posts/{post}', [AdminPostController::class, 'destroy'])->middleware('admin');
+    Route::get('panel/posts/', [AdminPostController::class, 'all'])->name('panel-posts');
+
+    Route::get('/panel/posts/create', [AdminPostController::class, 'viewCreate'])->name('panel-posts-create');
+    Route::post('/panel/posts/create', [AdminPostController::class, 'create'])->name('panel-posts-create');
+
+    Route::get('/panel/posts/{post}/edit', [AdminPostController::class, 'edit']);
+    Route::patch('/panel/posts/{post}', [AdminPostController::class, 'update']);
+    Route::delete('/panel/posts/{post}', [AdminPostController::class, 'destroy']);
+});

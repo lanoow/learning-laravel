@@ -62,4 +62,7 @@ Watched all videos from **Section 11**
 Watched videos 62-66 from **Section 12**
 
 ### Day 9
-Watched videos 67 from **Section 12**
+Watched video 67 from **Section 12**
+
+### Day 10
+Watched all videos remaining from **Section 12** & **Section 13**
