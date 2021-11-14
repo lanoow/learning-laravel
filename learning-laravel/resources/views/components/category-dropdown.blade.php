@@ -11,7 +11,10 @@
     <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-left -translate-y-2 scale-95 z-50">
         <div class="absolute left-0 w-32 mt-2 origin-top-left bg-white border border-gray-200 divide-y divide-gray-100 rounded-lg shadow-lg outline-none z-50" role="menu">
             <div class="py-1 text-gray-700">
-                <a href="/#blog" class="hover:text-gray-900 hover:bg-gray-100 flex justify-between w-full font-semibold px-4 py-2 text-md leading-5 text-left transition duration-200 ease-in-out {{ $_SERVER['REQUEST_URI'] === "/" ? 'bg-gray-100 text-red-600' : '' }}" role="menuitem">All</a>
+                @if (request()->routeIs('home'))
+                    <a href="/#blog" class="hover:text-gray-900 hover:bg-gray-100 flex justify-between w-full font-semibold px-4 py-2 text-md leading-5 text-left transition duration-200 ease-in-out {{ $_SERVER['REQUEST_URI'] === "/" ? 'bg-gray-100 text-red-600' : '' }}" role="menuitem">All</a>
+                @endif
+
                 @foreach ($categories as $category)
                     <a href="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category', 'page')) }}#blog" class="hover:text-gray-900 hover:bg-gray-100 flex justify-between w-full font-semibold px-4 py-2 text-md leading-5 text-left transition duration-200 ease-in-out {{ isset($currentCategory) && $currentCategory->is($category) ? 'bg-gray-100 text-red-600' : '' }}" role="menuitem">
                         {{ $category->name }}

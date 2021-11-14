@@ -14,7 +14,7 @@
 
             <input class="bg-gray-100 text-lg font-bold border-2 border-gray-400 rounded-lg py-2 px-4 outline-none focus:border-red-600 transition-all duration-200 shadow-lg" type="text" name="username" id="username" placeholder="Userame" value="{{ old('username') }}" required>
 
-           <input class="bg-gray-100 text-lg font-bold border-2 border-gray-400 rounded-lg py-2 px-4 outline-none focus:border-red-600 transition-all duration-200 shadow-lg" type="password" name="password" id="password" placeholder="Password" required>
+            <input class="bg-gray-100 text-lg font-bold border-2 border-gray-400 rounded-lg py-2 px-4 outline-none focus:border-red-600 transition-all duration-200 shadow-lg" type="password" name="password" id="password" placeholder="Password" required>
         </div>
 
         <!-- Buttons -->

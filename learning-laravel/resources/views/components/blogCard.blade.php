@@ -1,7 +1,7 @@
 @props(['post'])
 
 <div class="bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border border-gray-200 rounded-xl flex flex-col py-4 px-4  transition duration-200 text-gray-900 hover:text-red-600 shadow-lg hover:shadow-xl">
-    <img class="h-72 h-72 rounded-xl" src="{{ $post->photo }}" alt="{{ $post->title }} Image">
+    <img class="h-72 h-72 rounded-xl" src="{{ asset('storage/' . $post->photo) }}" alt="{{ $post->title }} Image">
 
     <a href="/post/{{ $post->slug }}" class="mt-4 text-3xl font-black transform hover:scale-105 hover:translate-x-2 transition duration-200">{{ $post->title }}</a>
     <span class="mt-2 text-gray-700 text-xl">{{ $post->excerpt }}</span>
